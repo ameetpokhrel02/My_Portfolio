@@ -67,8 +67,8 @@ const Contact: React.FC = () => {
       {status === 'success' && <div style={{ color: 'green', marginTop: 8 }}>Message sent successfully!</div>}
       {status === 'error' && <div style={{ color: 'red', marginTop: 8 }}>{error}</div>}
       <div className="contact-socials">
-        <a href="https://github.com/amitpokhrel123" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/amitpokhrel123" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/ameetpokhrel02" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/ameet-pokhrel-82533433b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </section>
   );
