@@ -35,4 +35,3 @@ This backend provides an API endpoint to receive and store contact form submissi
 
 ---
 
-**Make sure MongoDB is running locally or provide a remote URI.** 
