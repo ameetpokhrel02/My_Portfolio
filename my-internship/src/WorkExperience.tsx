@@ -25,7 +25,7 @@ const WorkExperience: React.FC = () => (
           <span className="duration">Present</span>
         </div>
         <ul className="experience-responsibilities">
-          <li>Created marketing materials including posters, banners, and reels for campaigns.</li>
+          <li>Created marketing materials including posters, banners, and reels for Educational Webniar.</li>
           <li>Managed official social media accounts (Facebook, Instagram, TikTok), improving audience reach and engagement.</li>
           <li>Captured and edited videos/photos for educational and promotional purposes.</li>
         </ul>
