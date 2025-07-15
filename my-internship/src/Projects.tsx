@@ -97,6 +97,14 @@ const projects = [
     demo: '#',
   },
   {
+    type: "Personal",
+    title: "Devi Kiwi Farm",
+    technologies: ['Typescript', 'React', 'Vite', 'Tailwindcss'],
+    description: "A Online based website for both Mobile and Desktop users for odering a kiwi fruits and read about the articles of the page.",
+    github: 'https://github.com/ameetpokhrel02/Devi-Kiwi_Farm',
+    demo: '#'
+  },
+  {
     type: 'Personal',
     title: 'Brewandchew Cafe Website',
     technologies: ['Python Django', 'HTML', 'CSS', 'JavaScript'],
