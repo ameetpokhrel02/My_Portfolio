@@ -112,6 +112,11 @@ const projects = [
     github: 'https://github.com/ameetpokhrel02/Second-Year-Project-SYP-',
     demo: '#',
   },
+  {
+    type: 'Personal',
+    title: 'AI Image Gen (Coming Soon)',
+    technologies: ['React', 'Django', 'AI API'],
+  }
 ];
 
 const tabs = [
@@ -140,35 +145,62 @@ const Projects: React.FC = () => {
         ))}
       </div>
       <div className="projects-list">
-        {filtered.map((project, idx) => (
-          <div className="project-card" key={project.title + idx}>
-            <h3>{project.title}</h3>
-            <div className="project-techs">
-              {project.technologies.map(tech => (
-                <span className="project-tech" key={tech}>{tech}</span>
-              ))}
-            </div>
-            <p className="project-desc">{project.description}</p>
-            <div className="project-links-row">
-              <a href={project.github} className="project-link small" target="_blank" rel="noopener noreferrer">
-                <FaGithub style={{ marginRight: 6, verticalAlign: 'middle' }} /> GitHub
-              </a>
-              {projectVideos[project.title] ? (
-                <button
-                  className="project-link small demo"
-                  onClick={() => setVideoUrl(projectVideos[project.title])}
-                  style={{ border: 'none', background: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
-                >
-                  <FaPlay style={{ marginRight: 6, verticalAlign: 'middle' }} /> Watch Demo
-                </button>
-              ) : (
-                <a href={project.demo} className="project-link small demo" target="_blank" rel="noopener noreferrer">
-                  <FaPlay style={{ marginRight: 6, verticalAlign: 'middle' }} /> Watch Demo
-                </a>
+        {filtered.map((project, idx) => {
+          const isAIImageGen = project.title === 'AI Image Gen (Coming Soon)';
+          return (
+            <div
+              className={`project-card${isAIImageGen ? ' ai-image-gen-card' : ''}`}
+              key={project.title + idx}
+              style={isAIImageGen ? {
+                backgroundImage: `url('/comming%20soon.jpeg')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative',
+                color: '#fff',
+                overflow: 'hidden',
+              } : {}}
+            >
+              {isAIImageGen && (
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  background: 'rgba(30,30,60,0.82)',
+                  zIndex: 1,
+                }} />
               )}
+              <div style={isAIImageGen ? { position: 'relative', zIndex: 2 } : {}}>
+                <h3>{project.title}</h3>
+                <div className="project-techs">
+                  {project.technologies.map(tech => (
+                    <span className="project-tech" key={tech}>{tech}</span>
+                  ))}
+                </div>
+                <p className="project-desc">{project.description}</p>
+                <div className="project-links-row">
+                  <a href={project.github} className="project-link small" target="_blank" rel="noopener noreferrer">
+                    <FaGithub style={{ marginRight: 6, verticalAlign: 'middle' }} /> GitHub
+                  </a>
+                  {projectVideos[project.title] ? (
+                    <button
+                      className="project-link small demo"
+                      onClick={() => setVideoUrl(projectVideos[project.title])}
+                      style={{ border: 'none', background: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
+                    >
+                      <FaPlay style={{ marginRight: 6, verticalAlign: 'middle' }} /> Watch Demo
+                    </button>
+                  ) : (
+                    <a href={project.demo} className="project-link small demo" target="_blank" rel="noopener noreferrer">
+                      <FaPlay style={{ marginRight: 6, verticalAlign: 'middle' }} /> Watch Demo
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       {videoUrl && (
         <div className="project-video-modal" onClick={() => setVideoUrl(null)}>
