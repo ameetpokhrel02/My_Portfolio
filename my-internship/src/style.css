@@ -859,24 +859,55 @@ button:focus-visible {
   transform: translate(50%, -50%);
 }
 @media (max-width: 700px) {
+  .hero-photo-code-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+  }
   .hero-social-icon {
+    position: static;
+    margin: 0.3rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     width: 38px;
     height: 38px;
     font-size: 1.1rem;
+    left: unset !important;
+    right: unset !important;
+    top: unset !important;
+    transform: none !important;
   }
   .hero-social-tooltip {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    background: none;
+    color: #fff;
+    box-shadow: none;
     font-size: 0.85rem;
-    padding: 4px 10px;
-    top: 46px;
+    padding: 0 0.5rem;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    transform: none;
+    transition: none;
+    white-space: nowrap;
   }
-  .hero-social-linkedin {
-    top: -18px;
+  .hero-social-icon:hover .hero-social-tooltip {
+    opacity: 1;
+    transform: none;
   }
-  .hero-social-github {
-    left: -18px;
-  }
+  .hero-social-linkedin,
+  .hero-social-github,
   .hero-social-instagram {
-    right: -18px;
+    position: static;
+    left: unset;
+    right: unset;
+    top: unset;
+    transform: none;
+    margin: 0.2rem 0;
   }
 }
 
