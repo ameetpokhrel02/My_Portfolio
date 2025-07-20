@@ -103,33 +103,26 @@ const Hero: React.FC = () => {
         <div className="hero-photo-code-col">
           <div className="hero-photo-code-flex" style={{ position: 'relative' }}>
             {/* Social Media Icons Around Profile Photo */}
-            <a
-              href="https://www.linkedin.com/in/ameet-pokhrel-82533433b/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-social-icon hero-social-linkedin"
-            >
-              <FaLinkedin size={32} />
-              <span className="hero-social-tooltip">LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/ameetpokhrel02"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-social-icon hero-social-github"
-            >
-              <FaGithub size={32} />
-              <span className="hero-social-tooltip">GitHub</span>
-            </a>
-            <a
-              href="https://www.instagram.com/ameetpokhrel02/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-social-icon hero-social-instagram"
-            >
-              <FaInstagram size={32} />
-              <span className="hero-social-tooltip">Instagram</span>
-            </a>
+            <div className="hero-social-icons-group">
+              <a
+                href="https://www.linkedin.com/in/ameet-pokhrel-82533433b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-icon hero-social-linkedin"
+              >
+                <FaLinkedin size={32} />
+                <span className="hero-social-tooltip">LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/ameetpokhrel02"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-icon hero-social-github"
+              >
+                <FaGithub size={32} />
+                <span className="hero-social-tooltip">GitHub</span>
+              </a>
+            </div>
             <div
               className="hero-photo-frame"
               style={{ transform: photoTransform, transition: 'transform 0.35s cubic-bezier(.4,2,.6,1)' }}

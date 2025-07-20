@@ -859,55 +859,82 @@ button:focus-visible {
   transform: translate(50%, -50%);
 }
 @media (max-width: 700px) {
-  .hero-photo-code-flex {
+  .hero-social-icons-group {
+    display: none !important;
+  }
+}
+@media (min-width: 701px) {
+  .hero-social-icons-group {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  .hero-social-icons-group .hero-social-icon {
+    pointer-events: auto;
+  }
+  .hero-social-icon {
+    position: absolute;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.7rem;
+    color: #fff;
+    background: #232345;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 2px 8px rgba(100, 108, 255, 0.10);
+    transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+    z-index: 2;
+    cursor: pointer;
   }
-  .hero-social-icon {
-    position: static;
-    margin: 0.3rem 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
-    left: unset !important;
-    right: unset !important;
-    top: unset !important;
-    transform: none !important;
+  .hero-social-icon:hover {
+    background: #646cff;
+    color: #fff;
+    transform: scale(1.12);
+    box-shadow: 0 4px 16px rgba(100, 108, 255, 0.18);
   }
   .hero-social-tooltip {
-    position: static;
-    opacity: 1;
-    pointer-events: auto;
-    background: none;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    background: #232345;
     color: #fff;
-    box-shadow: none;
-    font-size: 0.85rem;
-    padding: 0 0.5rem;
-    margin-top: 0;
-    margin-left: 0.5rem;
-    transform: none;
-    transition: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
     white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(100, 108, 255, 0.10);
+    transition: opacity 0.25s, transform 0.25s;
+    font-weight: 500;
+    margin-top: 4px;
   }
   .hero-social-icon:hover .hero-social-tooltip {
     opacity: 1;
-    transform: none;
+    transform: translateX(-50%) scale(1.05);
+    pointer-events: auto;
   }
-  .hero-social-linkedin,
-  .hero-social-github,
+  .hero-social-linkedin {
+    top: -24px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hero-social-github {
+    left: -24px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
   .hero-social-instagram {
-    position: static;
-    left: unset;
-    right: unset;
-    top: unset;
-    transform: none;
-    margin: 0.2rem 0;
+    right: -24px;
+    top: 50%;
+    transform: translate(50%, -50%);
   }
 }
 
@@ -1346,23 +1373,51 @@ button:focus-visible {
 }
 
 @media (max-width: 700px) {
-  #app {
-    max-width: 100vw;
-    width: 100vw;
-    padding: 0.5rem;
-    box-sizing: border-box;
-  }
   .hero-section {
-    min-height: unset;
-    width: 100vw;
-    box-sizing: border-box;
-    padding: 0.5rem 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 0.5rem 0 1.5rem 0;
   }
-  .hero-content {
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2rem;
     max-width: 100vw;
     width: 100vw;
-    padding: 1.2rem 0.5rem;
+    padding: 1.2rem 0.2rem 0.5rem 0.2rem;
     box-sizing: border-box;
+  }
+  .hero-photo-code-col {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .hero-photo-code-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .hero-photo-frame {
+    width: 140px;
+    height: 140px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 90vw;
+    max-height: 90vw;
+    border-width: 4px;
+  }
+  .hero-code-block {
+    width: 95vw;
+    max-width: 98vw;
+    font-size: 0.95rem;
+    margin-top: 0.7rem;
   }
 }
 
