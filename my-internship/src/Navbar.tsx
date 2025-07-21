@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaHome, FaBriefcase, FaBrain, FaCode, FaTrophy, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 
+// Define the navigation items with labels icons and hrefs
 const navItems = [
   { label: 'Home', icon: <FaHome />, href: '#home' },
   { label: 'Skills', icon: <FaBrain />, href: '#skills' },
