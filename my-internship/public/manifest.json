@@ -1,0 +1,62 @@
+{
+  "name": "Amit Pokhrel Portfolio",
+  "short_name": "Amit Portfolio",
+  "description": "Amit Pokhrel - Frontend Developer, IoT Developer, and Creative Professional Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#242424",
+  "theme_color": "#646cff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/mee.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/mee.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/mee.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Amit Pokhrel Portfolio - Desktop View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "View my latest projects and work",
+      "url": "/#work",
+      "icons": [
+        {
+          "src": "/mee.jpg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact Me",
+      "short_name": "Contact",
+      "description": "Get in touch with me",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "/mee.jpg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+} 

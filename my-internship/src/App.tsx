@@ -7,8 +7,12 @@ import Projects from './Projects';
 import Contact from './Contact.tsx';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import { useScrollSEO } from './hooks/useScrollSEO';
 
 const App: React.FC = () => {
+  // Initialize SEO tracking
+  useScrollSEO();
+
   return (
     <div>
       <Navbar />

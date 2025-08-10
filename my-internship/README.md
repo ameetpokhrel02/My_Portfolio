@@ -1,3 +1,4 @@
+
 # Amit Pokhrel Portfolio
 
 A modern, responsive portfolio web application built with **React**, **TypeScript**, and **Vite**. This project showcases skills, work experience, awards, projects, certificates, and more, with a visually appealing UI and smooth navigation.
@@ -11,6 +12,8 @@ A modern, responsive portfolio web application built with **React**, **TypeScrip
 - **Responsive Design**: Works on all devices.
 - **Sections**: Hero, About, Skills, Work Experience, Awards, Projects, Contact, Certificates.
 - **Media Assets**: Includes images, certificates, and project demo videos.
+- **SEO Optimized**: Comprehensive SEO with meta tags, structured data, sitemap, and PWA support.
+- **Progressive Web App**: Installable with offline support and service worker.
 
 ---
 
@@ -33,6 +36,10 @@ my-internship/
 │   ├── App.tsx               # Main app component
 │   ├── main.tsx              # React entry point
 │   ├── style.css             # Custom and Tailwind CSS
+│   ├── components/           # Reusable components
+│   │   └── SEO.tsx           # SEO component for dynamic meta tags
+│   ├── hooks/                # Custom React hooks
+│   │   └── useScrollSEO.ts   # Hook for scroll-based SEO updates
 │   ├── Navbar.tsx            # Navigation bar
 │   ├── Hero.tsx              # Hero/landing section
 │   ├── About.tsx             # About section
@@ -45,6 +52,15 @@ my-internship/
 │   ├── counter.ts            # Example counter (demo)
 │   ├── typescript.svg        # TypeScript logo
 │   └── vite-env.d.ts         # Vite environment types
+│
+├── public/                   # Static assets
+│   ├── *.jpg, *.png, *.pdf   # Certificates, images, resume
+│   ├── vite.svg              # Favicon
+│   ├── videos/               # Project demo videos
+│   ├── sitemap.xml           # SEO sitemap
+│   ├── robots.txt            # Search engine directives
+│   ├── manifest.json         # PWA manifest
+│   └── sw.js                 # Service worker
 │
 └── ...
 ```
@@ -98,6 +114,20 @@ npm run preview
 - **Vite**
 - **Tailwind CSS**
 - **React Icons**
+
+---
+
+## 🔍 SEO Features
+- **Meta Tags**: Comprehensive meta tags for search engines
+- **Open Graph**: Social media sharing optimization
+- **Twitter Cards**: Twitter-specific sharing optimization
+- **Structured Data**: JSON-LD schema markup for rich snippets
+- **Sitemap**: XML sitemap for search engine indexing
+- **Robots.txt**: Search engine crawling directives
+- **PWA Support**: Progressive Web App with manifest and service worker
+- **Dynamic SEO**: Scroll-based meta tag updates
+- **Canonical URLs**: Prevent duplicate content issues
+- **Performance**: Optimized loading with preconnect and caching
 
 ---
 
